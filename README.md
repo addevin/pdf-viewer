@@ -2,7 +2,6 @@
 
 Simple browser-based PDF viewer with multiple rendering modes selected through query params.
 
-Short aliases are supported for every query param. If both the full name and short alias are provided, the full name takes priority.
 
 ## Demo URL
 
@@ -13,6 +12,8 @@ https://addevin.github.io/pdf-viewer?file=https://pdfobject.com/pdf/sample.pdf&o
 <a href="https://addevin.github.io/pdf-viewer?file=https%3A%2F%2Fpdfobject.com%2Fpdf%2Fsample.pdf&open-in=pdf-js&hide-tabs=false&hide-header=false&remove-timestamp=false&hide-git-url=false" target="_blank" rel="noopener noreferrer">Open Demo URL &#8599;</a>
 
 ## Query Params
+
+Short aliases are supported for every query param. If both the full name and short alias are provided, the full name takes priority.
 
 ### `file`
 
