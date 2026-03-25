@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PDF Render Viewer</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+
+<body class="bg-[#0F0F10] text-white">
+
+<div id="app" class="h-screen w-full flex flex-col">
+
+  <!-- Tabs -->
+  <div class="flex w-full border-b border-[#2A2A2A] px-1 gap-2" id="header">
+    <div id="tabs" class="flex gap-1 overflow-x-auto py-1"></div>
+
+    <div class="flex gap-1 items-center py-1">
+      <div class="w-[1px] h-full bg-white opacity-10"></div>
+      <button id="reloadBtn"
+        class="px-2 py-1 text-xs bg-[#212124] hover:bg-[#2a2a2e] rounded">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+    </div>
+
+    <div class="flex items-center py-1 ml-auto" id="githubLinkContainer">
+      <a
+        href="https://github.com/addevin/pdf-viewer"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="px-2 py-1 bg-[#212124] hover:bg-[#2a2a2e] rounded flex items-center justify-center"
+        aria-label="Open GitHub repository"
+      >
+        <img
+          src="https://github.githubassets.com/favicons/favicon-dark.svg"
+          alt="GitHub"
+          class="w-4 h-4"
+        />
+      </a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="flex-1 relative overflow-auto" id="content">
+
+    <!-- Loader -->
+    <div id="loader" class="absolute inset-0 flex justify-center items-center">
+      <div class="absolute inset-0 bg-black opacity-70"></div>
+      <i class="fa-solid fa-spinner animate-spin text-3xl text-[#639af3]"></i>
+    </div>
+
+    <!-- Dynamic content -->
+    <div id="viewerContainer" class="w-full h-full"></div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
